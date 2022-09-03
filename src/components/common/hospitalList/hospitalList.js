@@ -22,6 +22,8 @@ function Hospital({ details }) {
     const [beduid, setBeduid] = useState("")
     const [Sdate, setSdate] = useState("")
     const [Edate, setEdate] = useState("")
+    const [patientName, setPatientName] = useState("")
+    const [bedType, setBedType] = useState("")
 
     const [user, setUser] = useState(null)
 
@@ -29,8 +31,8 @@ function Hospital({ details }) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        console.log(details)
         setUser(state.user);
+        setPatientName(state.user.name);
     }, [state])
 
 
@@ -40,7 +42,9 @@ function Hospital({ details }) {
             beduid,
             patientid:user._id,
             sourceuid:details._id,
-            duration:`${Sdate} to ${Edate}`
+            duration:`${Sdate} to ${Edate}`,
+            patientName,
+            bedType
         }
         axios.post(`${API_URI}/booking/add`, data)
             .then(res=>alert(res.data.status))
@@ -52,11 +56,11 @@ function Hospital({ details }) {
         
     }
 
-    const stepUp = (bid,e)=>{
+    const stepUp = (bid,btype,e)=>{
         e.preventDefault();
         setBookingStep(bookingStep+1)
         setBeduid(bid)
-        
+        setBedType(btype)
     }
 
     return (
@@ -67,7 +71,7 @@ function Hospital({ details }) {
                         bookingStep === 1?
                         beds &&
                         beds.map((b) =>
-                            <div className={classes.bedCard} onClick={(e) => stepUp(b._id,e)}>
+                            <div className={classes.bedCard} onClick={(e) => stepUp(b._id,b.type,e)}>
                                 <p>{b.type}</p>
                                 <h3>{b.number}</h3>
                             </div>
