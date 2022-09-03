@@ -18,6 +18,10 @@ function Hospital({ details }) {
     const [showModal, setShowModal] = useState(false)
 
     const [beds, setBeds] = useState(details.bed)
+    const [bookingStep, setBookingStep] = useState(1)
+    const [beduid, setBeduid] = useState("")
+    const [Sdate, setSdate] = useState("")
+    const [Edate, setEdate] = useState("")
 
     const [user, setUser] = useState(null)
 
@@ -25,25 +29,34 @@ function Hospital({ details }) {
     const navigate = useNavigate();
 
     useEffect(() => {
+        console.log(details)
         setUser(state.user);
     }, [state])
 
 
-    const handlebook = (e, type) => {
+    const handlebook = (e) => {
         e.preventDefault();
-        var data = {
-            uid: user._id,
-            type: type,
+        const data = {
+            beduid,
+            patientid:user._id,
+            sourceuid:details._id,
+            duration:`${Sdate} to ${Edate}`
         }
-        console.log(data)
-        axios.post(`${API_URI}/hospital/bed/${details._id}`, data)
-            .then((res) => {
-                alert('Booked Successfully');
-                navigate('/dashboard')
-            })
-            .catch(err => {
-                alert('Something went wrong')
-            })
+        axios.post(`${API_URI}/booking/add`, data)
+            .then(res=>alert(res.data.status))
+            .catch(err=>console.log(err))
+        setBookingStep(1)
+        setShowModal(false)
+        setEdate("")
+        setSdate("")
+        
+    }
+
+    const stepUp = (bid,e)=>{
+        e.preventDefault();
+        setBookingStep(bookingStep+1)
+        setBeduid(bid)
+        
     }
 
     return (
@@ -51,13 +64,24 @@ function Hospital({ details }) {
             <ModalCtn showModal={showModal} setShowModal={setShowModal} header={"Beds Available"}>
                 <div className={classes.showCards}>
                     {
+                        bookingStep === 1?
                         beds &&
                         beds.map((b) =>
-                            <div className={classes.bedCard} onClick={(e) => handlebook(e, b.type)}>
+                            <div className={classes.bedCard} onClick={(e) => stepUp(b._id,e)}>
                                 <p>{b.type}</p>
                                 <h3>{b.number}</h3>
                             </div>
-                        )
+                        ):
+                        <div className={classes.durationInput}>
+                            <form onSubmit={(e)=>handlebook(e)}>
+                                <label>Start Date</label>
+                                <input placeholder="dd/mm/yyyy" value={Sdate} onChange={(e)=>{setSdate(e.target.value)}}/>
+                                <label>End Date</label>
+                                <input placeholder="dd/mm/yyyy" value={Edate} onChange={(e)=>{setEdate(e.target.value)}}/>
+                                <input type="submit" value="book" className={classes.button}/>
+                            </form>
+                        </div>   
+                        
                     }
                 </div>
             </ModalCtn>
