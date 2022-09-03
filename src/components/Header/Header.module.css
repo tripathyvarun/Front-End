@@ -1,0 +1,54 @@
+.majorContainer{
+    height:85px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.profileDetails{
+    height:70%;
+    width:300px;
+    background-color: #C4E1F8;
+    border-top-left-radius: 50px ;
+    border-bottom-left-radius: 50px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:14px;
+}
+.profImg{
+    width: 47px;
+    height: 47px;
+    border-radius: 47px;
+    margin-left: 10px;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.nameContainer{
+    font-size: 19px;
+    font-weight: 600;
+}
+.btnHolder{
+    padding: 0px 30px;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #AB98EE;
+    padding: 0px 40px;
+    height:70%;
+    border-radius: 14px;
+    font-weight: 600;
+}
+.iconContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+}
+.iconContainer svg{
+    font-size: 20px;
+    cursor: pointer;
+}

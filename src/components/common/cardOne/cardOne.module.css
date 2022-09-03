@@ -1,0 +1,60 @@
+.majorContainer{
+    height:120px;
+    width:300px;
+    border:none;
+    border-radius: 14px;
+    box-shadow: 2px 2px 10px 1px #8389C7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:0px
+}
+.majorContainer:hover{
+    cursor: pointer;
+    transform:scale(1.04);
+}
+.image{
+    margin:0px 5px;
+    height: 70%;
+}
+.content h2{
+    font-family: 'quicksand';
+    margin: 0px;
+    text-align: left;
+}
+.content p{
+    margin: 0px;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.carddesign{
+    height: 70%;
+    margin-right: -1px;
+}
+.edignose{
+    display: flex;
+    justify-content: space-between;
+    gap: 10vh;
+    flex-direction: column;
+    align-items: center;
+}
+.textarea{
+    background: #F7F8FC;
+box-shadow: 4px 4px 20px #767FC2;
+border-radius: 15px;
+}
+.submitbtn{
+    background: #53C3E9;
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+border: none;
+height: 5vh;
+width: 5vw;
+
+}
+.submitbtn:hover{
+    cursor: pointer;
+    transform:scale(1.04);
+}

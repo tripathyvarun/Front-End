@@ -1,0 +1,8 @@
+.majorContainer{
+    height:calc(100vh - 85px);
+    width:100%;
+    padding: 5% 15%;
+    padding-bottom: 0px;
+    
+    /* background-color: blue; */
+}

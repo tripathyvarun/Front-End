@@ -1,0 +1,11 @@
+.majorContainer{
+    display: grid;
+    grid-template-columns: 70px calc(100% - 70px);
+    height: 100vh;
+}
+.navbar{
+    background-color: #D1D4F3;
+}
+.main{
+    background-color: #E9EAFC;
+}

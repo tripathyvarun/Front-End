@@ -1,0 +1,153 @@
+::-webkit-scrollbar{
+    display: none;
+}
+.container{
+display: flex;
+}
+.left{
+    overflow-y: scroll;
+    width: 27vw;
+    padding: 2vw;
+    
+}
+.left h1{    
+    width: 25vw;
+}
+.home{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+.leftup{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.app{
+    background: rgba(115, 90, 217, 0.5);
+border-radius: 30px;
+border: none;
+height: 8vh;
+width: 20vw;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+}
+.mid{
+    background: linear-gradient(180deg, rgba(131, 137, 199, 0.25) 0%, rgba(83, 195, 233, 0.25) 100%);
+    height: 93vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vh 0 5vh;
+}
+.navlinks{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0vw 1vw;
+    align-items: center;
+    /* font-family: 'Gilroy'; */
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0;
+}
+.logo{
+    width: 3vw;
+}
+.mockup{
+    width: 40vw;
+    position: absolute;
+    left: 27.5vw;
+    top: 20vh;
+}
+.getstarted{
+    border: none;
+height: 8vh;
+width: 18vw;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+background: #735AD9;
+border-radius: 500px;
+}
+.right{
+    padding: 2vw 5vw;
+    width: 25vw;
+    
+    
+}
+.features{
+    height: 95vh;
+display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.lefttext{
+   text-align: left;
+}
+.righttext{
+    padding-left: 5vw;
+    text-align: left;
+}
+.about{
+    padding: 5vh 1vw;
+}
+.sehyog{
+    color:#735AD9;
+}
+.aboutpara{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 42px;
+text-align: left;
+}
+.pharmacy{
+    height: 100vh;
+}
+.pharmacy h1{
+    color: #735AD9;
+}
+.pharmacypara{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+}
+.contact{
+    height: 100vh;
+
+}
+.contactform{
+    padding: 3vw;
+    background: linear-gradient(180deg, rgba(115, 90, 217, 0.25) 0%, rgba(82, 193, 231, 0.25) 100%);
+border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 40vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.contactform input , textarea{
+    width: 30vw;
+    height: 5vh;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Poppins';
+}
+.contactform button{
+    background: rgba(82, 193, 231, 0.8);
+border-radius: 15px;
+border: none;
+width: 20vw;
+height: 5vh;
+}
+

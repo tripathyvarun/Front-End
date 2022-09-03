@@ -1,0 +1,41 @@
+.majorContainer{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact{
+    height: fit-content;
+}
+.contactform{
+    padding: 3vw;
+    background: linear-gradient(180deg, rgba(115, 90, 217, 0.25) 0%, rgba(82, 193, 231, 0.25) 100%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+.contactform p{
+    width: 90%;
+    text-align: left;
+}
+.contactform input{
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins';
+}
+.contactform button{
+    background: rgba(82, 193, 231, 0.8);
+    border-radius: 10px;
+    border: none;
+    width: 70%;
+    height: 38px;
+}
+

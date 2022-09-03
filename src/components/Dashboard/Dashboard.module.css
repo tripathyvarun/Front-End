@@ -1,0 +1,45 @@
+.majorContainer{
+    height:calc(100vh - 85px);
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    padding: 30px;
+    gap:40px
+}
+.cardHolder{
+    height:140px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap:40px;
+}
+.HospitalHolder{
+    height:calc(100vh - 140px - 85px - 70px);
+    margin-top: 40px;
+}
+
+.adhaar{
+    height:240px;
+    width:100%;
+    background-image: url('../../assets//dashboard/adhaar.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:6px
+}
+.adhaar h4{
+    margin:0px;
+    color:white;
+}
+.adhaar h2{
+    margin: 4px;
+    color:white;
+}
+
+.doctorHolder{
+    padding-top: 40px;
+}

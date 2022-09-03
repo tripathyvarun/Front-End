@@ -1,0 +1,97 @@
+.majorContainer{
+    height:calc(100vh - 240px - 85px - 70px);
+    width:100%;
+    border:none;
+    border-radius: 14px;
+    border-bottom-left-radius:0px ;
+    border-bottom-right-radius:0px ;
+    box-shadow: 2px 2px 10px 1px #8389C7;
+    padding: 20px;
+}
+
+.header{
+    height:40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1{
+    font-family: 'quicksand';
+    margin: 0px;
+    text-align: left;
+}
+.header input{
+    width:40%;
+    height:36px;
+    padding: 0px 10px;
+    border:none;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px 0px #8389c7af;
+    background-color: rgba(255, 255, 255, 0.685);
+}
+
+.majorCardContainer{
+    height:100px;
+    width:97%;
+    border:none;
+    border-radius: 14px;
+    box-shadow: 1px 1px 6px 0px #8389c7af;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:0px;
+    margin: 20px auto;
+    padding: 10px;
+}
+.majorCardContainer:hover{
+    cursor: pointer;
+    transform:scale(1.01);
+}
+
+.List{
+    height: calc(100% - 50px);
+    margin-top: 30px;
+    overflow: auto;
+}
+
+.image{
+    background-color: rgba(0, 0, 0, 0.493);
+    height: 70px;
+    width: 70px;
+    border-radius: 80px;
+}
+
+.content{
+    width:45%;
+    text-align: left;
+}
+.content h2{
+    font-family: 'quicksand';
+    margin: 0px;
+    text-align: left;
+}
+.content h3{
+    font-family: 'quicksand';
+    margin: 0px;
+    text-align: left;
+}
+.content p{
+    margin: 0px;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: left;
+}
+
+
+.Appointment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:20%;
+}
+
+.Appointment svg{
+    font-size: 27px;
+    color:#52C1E7;
+}
