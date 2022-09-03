@@ -94,4 +94,34 @@
 .Appointment svg{
     font-size: 27px;
     color:#52C1E7;
+}.durationInput{
+    width: 100%;
+}
+.durationInput form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px
+}
+.durationInput form input{
+    width: 40%;
+    height: 40px;
+}
+.durationInput form select{
+    width: 40%;
+    height: 40px;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #AB98EE;
+    padding: 10px 40px;
+    height:70%;
+    border-radius: 7px;
+    font-weight: 600;
+    border: none;
 }
