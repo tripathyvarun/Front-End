@@ -31,12 +31,14 @@ function Cardone({ Heading, subline }) {
     const [s1, setS1] = useState(null)
     const [s2, setS2] = useState(null)
     const [s3, setS3] = useState(null)
+    const [s4, setS4] = useState(null)
+    const [s5, setS5] = useState(null)
     const [desease, setDesease] = useState()
     const check = (e)=>{
         e.preventDefault()
-        axios.get(`https://disease-model.herokuapp.com/symptoms=${s1}&${s2}&${s3}`)
+        axios.get(`https://seheyog-dshack.herokuapp.com/symptoms=${s1}&${s2}&${s3}&${s4}&${s5}`)
             .then(res=>{
-                console.log(res.data)
+                setDesease(res.data.Deasease)
             })
     }
 
@@ -71,8 +73,32 @@ function Cardone({ Heading, subline }) {
                                     )
                             }
                         </select>
+
+                        <select onChange={(e)=>setS4(e.target.value)}>
+                            {
+                                symptoms &&
+                                symptoms.map(s=>
+                                    <option>{s}</option>
+                                    )
+                            }
+                        </select>
+
+                        <select onChange={(e)=>setS5(e.target.value)}>
+                            {
+                                symptoms &&
+                                symptoms.map(s=>
+                                    <option>{s}</option>
+                                    )
+                            }
+                        </select>
                         <button className={classes.submitbtn} onClick={e=>{check(e)}}>Submit</button>
-                        <textarea className={classes.textArea} placeholder="pridicted tests and deseases" />
+                        <p>Desease</p>
+                        <p>
+                            {
+                                desease &&
+                                <p>{desease}</p>
+                            }
+                        </p>
                     </div>
                 </> :
                     <><div className={classes.nameLogo}>

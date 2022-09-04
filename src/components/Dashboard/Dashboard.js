@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import classes from './Dashboard.module.css'
 
+import { Link } from 'react-router-dom'
+
 import Cardone from '../common/cardOne/cardone'
 import HospitalList from '../common/hospitalList/hospitalList'
 import DoctorList from '../common/doctorList/doctorList'
@@ -24,7 +26,7 @@ function Dashboard() {
             <div className={classes.leftCol}>
                 <div className={classes.cardHolder}>
                     <Cardone Heading={"ediagnosis"} subline={"Get your diagonosis virtually done."} />
-                    <Cardone Heading={"Med History"} subline={"View your medical history."} />
+                    <Link to={"/medhistory"}><Cardone Heading={"Med History"} subline={"View your medical history."} /></Link>
                 </div>
                 <div className={classes.HospitalHolder}>
                     <HospitalList />
