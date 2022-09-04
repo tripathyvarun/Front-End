@@ -1,43 +1,57 @@
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
-.container{
-display: flex;
+
+.container {
+    display: flex;
+    height: 60vh;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    background: linear-gradient(180deg, rgba(131, 137, 199, 0.25) 0%, rgba(83, 195, 233, 0.25) 100%);
+    border-radius: 0px 0px 100px 100px;
 }
-.left{
+
+.left {
     overflow-y: scroll;
     width: 27vw;
     padding: 2vw;
-    
+
 }
-.left h1{    
+
+.left h1 {
     width: 25vw;
 }
-.home{
+
+.home {
     height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
 }
-.leftup{
+
+.leftup {
     display: flex;
     flex-direction: column;
     gap: 5vh;
 }
-.app{
+
+.app {
     background: rgba(115, 90, 217, 0.5);
-border-radius: 30px;
-border: none;
-height: 8vh;
-width: 20vw;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
+    border-radius: 30px;
+    border: none;
+    height: 8vh;
+    width: 20vw;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
 }
-.mid{
-    background: linear-gradient(180deg, rgba(131, 137, 199, 0.25) 0%, rgba(83, 195, 233, 0.25) 100%);
+
+.mid {
+    /* background: linear-gradient(180deg, rgba(131, 137, 199, 0.25) 0%, rgba(83, 195, 233, 0.25) 100%); */
     height: 93vh;
     width: 35vw;
     display: flex;
@@ -45,7 +59,9 @@ font-size: 32px;
     justify-content: space-between;
     padding: 2vh 0 5vh;
 }
-.navlinks{
+
+.navlinks {
+    width: 40vw;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -53,82 +69,97 @@ font-size: 32px;
     align-items: center;
     /* font-family: 'Gilroy'; */
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 20px;
     margin: 0;
 }
-.logo{
+
+.logo {
     width: 3vw;
 }
-.mockup{
+
+.mockup {
     width: 40vw;
     position: absolute;
     left: 27.5vw;
     top: 20vh;
 }
-.getstarted{
+
+.getstarted {
     border: none;
-height: 8vh;
-width: 18vw;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-background: #735AD9;
-border-radius: 500px;
+    height: 8vh;
+    width: 18vw;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    background: #735AD9;
+    border-radius: 500px;
 }
-.right{
+
+.right {
     padding: 2vw 5vw;
     width: 25vw;
-    
-    
+
+
 }
-.features{
+
+.features {
     height: 95vh;
-display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.lefttext{
-   text-align: left;
+
+.lefttext {
+    text-align: left;
 }
-.righttext{
+
+.righttext {
     padding-left: 5vw;
     text-align: left;
 }
-.about{
+
+.about {
     padding: 5vh 1vw;
 }
-.sehyog{
-    color:#735AD9;
-}
-.aboutpara{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 42px;
-text-align: left;
-}
-.pharmacy{
-    height: 100vh;
-}
-.pharmacy h1{
+
+.sehyog {
     color: #735AD9;
 }
-.pharmacypara{
+
+.aboutpara {
     font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    text-align: left;
 }
-.contact{
+
+.pharmacy {
+    height: 100vh;
+}
+
+.pharmacy h1 {
+    color: #735AD9;
+}
+
+.pharmacypara {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.contact {
     height: 100vh;
 
 }
-.contactform{
+
+.contactform {
     padding: 3vw;
     background: linear-gradient(180deg, rgba(115, 90, 217, 0.25) 0%, rgba(82, 193, 231, 0.25) 100%);
-border-radius: 15px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     width: 40vw;
@@ -136,18 +167,50 @@ border-radius: 15px;
     justify-content: space-between;
     align-items: center;
 }
-.contactform input , textarea{
+
+.contactform input,
+textarea {
     width: 30vw;
     height: 5vh;
     border-radius: 15px;
     border: none;
     font-family: 'Poppins';
 }
-.contactform button{
+
+.contactform button {
     background: rgba(82, 193, 231, 0.8);
-border-radius: 15px;
-border: none;
-width: 20vw;
-height: 5vh;
+    border-radius: 15px;
+    border: none;
+    width: 20vw;
+    height: 5vh;
 }
 
+.bottom {
+    width: 60vw;
+}
+
+.features {
+    margin-top: -30vh;
+    width: 40vw;
+}
+
+.centerbg {
+    background-image: url("../../assets/landing/centerbg.png");
+    background-size: 100vw;
+    background-position: 0vw 14vw;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3vw;
+}
