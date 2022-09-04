@@ -24,8 +24,8 @@ function Navbar() {
             <Link to="/pharmacy" onClick={()=>setLocation("/pharmacy")}>
                 <img src={(location === "/pharmacy")?ImageS:Image} style={{backgroundColor:(location === "/pharmacy")?"#735AD9":"transparent", borderRadius:1000}}/>
             </Link>
-            <Link to="/medicalHistory" onClick={()=>setLocation("/medicalHistory")}>
-                <img src={(location === "/medicalHistory")?ImageS:Image} style={{backgroundColor:(location === "/medicalHistory")?"#735AD9":"transparent", borderRadius:1000}}/>
+            <Link to="/medhistory" onClick={()=>setLocation("/medhistory")}>
+                <img src={(location === "/medhistory")?ImageS:Image} style={{backgroundColor:(location === "/medhistory")?"#735AD9":"transparent", borderRadius:1000}}/>
             </Link>
         </div>
     )

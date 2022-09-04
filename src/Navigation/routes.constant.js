@@ -3,6 +3,7 @@ import DashboardPage from "../pages/dashboard.page"
 import LoginPage from "../pages/Login.page"
 import LandingPage from "../pages/Landing.page"
 import HospitalBookingPage from "../pages/hospitalBooking.page"
+import MedHistoryPage from "../pages/medHistory.page"
 
 
 
@@ -14,6 +15,10 @@ export const privateRoutes = [
     {
         path:"/hospitals",
         components:<HospitalBookingPage />
+    },
+    {
+        path:"/medhistory",
+        components:<MedHistoryPage />
     },
 ]
 
