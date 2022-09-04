@@ -1,0 +1,15 @@
+.majorContainer{
+    height:calc(100vh - 85px);
+    width:100%;
+    padding: 5% 10%;
+    padding-bottom: 0px;
+    
+    /* background-color: blue; */
+}
+.report{
+    width:100%;
+    box-shadow: 1px 1px 7px 0px #8389c7ad;
+    border-radius: 8px;
+    margin: 10px 0px;
+    padding: 15px;
+}
